@@ -1,0 +1,71 @@
+/*Scroll Up*/
+.scroll-top-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 66px;
+    height: 66px;
+    z-index: -1;
+}
+
+.scroll-top-button {
+    width:0;
+    height:0;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%,-50%);
+}
+
+.scroll-top-button:hover {
+    background-color: yellow;
+    transition: .5s;
+    transform: translate(-50%,-50%) scale(.9);
+}
+
+
+.scroll-top-button i {
+    position: absolute;
+    font-size:17px;
+    top: 48%;
+    left: 50%;
+    color: #fff;
+    transition: .2s;
+    transform: translate(-50%,-50%);
+}
+
+.show-btn-top {
+    z-index: 10;
+}
+
+.show-btn-top .scroll-top-button{
+    animation:popup .3s ease-in-out;
+    width: 66px;
+    height: 66px;
+    z-index: 11;
+}
+
+.show-btn-top i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 80px;
+        height: 80px;
+    }
+
+    100%{
+        width: 66px;
+        height: 66px;
+    }
+}
