@@ -11,11 +11,3 @@ window.onscroll = function(){
         document.querySelector('#scroll-top-icon').classList.remove('fas','fa-chevron-up');
     }
 }
-
-document.querySelector('.scroll-top-button')
-.addEventListener('click',() => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
